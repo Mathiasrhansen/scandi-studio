@@ -26,7 +26,7 @@ main {
 
 .navlink {
     font-family: frontis-light;
-    color: black;
+    color: #392e23;
     text-decoration: none;
     font-size: 20px;
 }
@@ -87,6 +87,7 @@ main {
     font-style: normal;
     font-weight: 300;
     line-height: 150%;
+    color:#392e23;
 }
 
 .productCard {
