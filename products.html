@@ -5,17 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/custom.css" />
     <link rel="stylesheet" href="css/general.css" />
-    <link rel="stylesheet" href="css/index.css" />
-    <title>Scandi Studio</title>
+    <link rel="stylesheet" href="css/products.css" />
+    <script src="js/products.js" defer></script>
+    <title>Products</title>
   </head>
   <body>
     <header>
       <nav class="navbar">
         <div class="links">
           <a href="" class="navlink">Brands</a>
-          <a href="" class="navlink">About us</a>
+          <a href="about.html" class="navlink">About us</a>
         </div>
-        <a href="" class="navlink" id="logo">
+        <a href="index.html" class="navlink" id="logo">
           <svg
             width="191"
             height="131"
@@ -152,78 +153,13 @@
       </nav>
     </header>
     <main>
-      <section class="hero">
-        <img src="img/hero.webp" alt="" class="heroImg" />
-        <div class="heroContainer">
-          <h1 class="heroText">New A/W collection</h1>
-          <a href="" class="heroBtn">Discover new collection</a>
-        </div>
-      </section>
-      <section class="categories">
-        <a href="products.html?category=furniture" class="category"
-          >Furniture</a
-        >
-        <a href="products.html?category=home-decoration" class="category"
-          >Home Decoration</a
-        >
-        <a href="products.html?category=kitchen-accessories" class="category"
-          >Kitchen Accessories</a
-        >
-      </section>
-      <div class="line">
-        <svg
-          width="1306"
-          height="5"
-          viewBox="0 0 1306 5"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <line
-            x1="0.00153139"
-            y1="0.500002"
-            x2="1306"
-            y2="4.5"
-            stroke="black"
-          />
-        </svg>
+      <h1 class="categoryTitle"></h1>
+      <div class="sortContainer">
+        <div class="sortBtn">Sort by</div>
+        <p id="hilo" class="hidden sorting">High to low</p>
+        <p href="" id="lohi" class="hidden sorting">Low to high</p>
       </div>
-      <section class="bestsellers">
-        <h2 class="sectionHeading">Bestsellers</h2>
-        <div class="cardContainer">
-          <a href="products.html?category=" class="bestsellerCard">
-            <div class="imgContainer">
-              <img src="img/thumbnail.webp" alt="" class="productImg" />
-            </div>
-            <p class="productName">dasdsa</p>
-            <p class="productTag">swing</p>
-            <p class="productPrice">cxxvvx</p>
-          </a>
-          <a href="" class="bestsellerCard">
-            <div class="imgContainer">
-              <img src="img/thumbnail.webp" alt="" class="productImg" />
-            </div>
-            <p class="productName">dasdsa</p>
-            <p class="productTag">swing</p>
-            <p class="productPrice">cxxvvx</p>
-          </a>
-          <a href="" class="bestsellerCard">
-            <div class="imgContainer">
-              <img src="img/thumbnail.webp" alt="" class="productImg" />
-            </div>
-            <p class="productName">dasdsa</p>
-            <p class="productTag">swing</p>
-            <p class="productPrice">cxxvvx</p>
-          </a>
-          <a href="" class="bestsellerCard">
-            <div class="imgContainer">
-              <img src="img/thumbnail.webp" alt="" class="productImg" />
-            </div>
-            <p class="productName">dasdsa</p>
-            <p class="productTag">swing</p>
-            <p class="productPrice">cxxvvx</p>
-          </a>
-        </div>
-      </section>
+      <section class="productContainer"></section>
     </main>
     <footer></footer>
   </body>

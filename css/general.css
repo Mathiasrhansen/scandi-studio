@@ -5,10 +5,19 @@
 
 @font-face {
     font-family: frontis-light;
-    src: url(../fonts/Frontis-Regular.ttf);
+    src: url(../fonts/Frontis-Light.ttf);
 }
 
 @font-face {
     font-family: inter-reg;
     src: url(../fonts/Inter_18pt-Regular.ttf);
 }
+
+@font-face {
+    font-family: inter-light;
+    src: url(../fonts/Inter_18pt-Light.ttf);
+}
+
+body {
+    background-color: var(--background-colour);
+ }

@@ -1,0 +1,173 @@
+main {
+    margin: 0 10vw;
+}
+
+/* Navbar */
+.navbar {
+    margin-top: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.icons, .links {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 1.5rem;  
+    margin-top: 1.5rem;   
+}
+
+.icons {
+    gap: 1rem;
+}
+
+.links {
+    gap: 1.5rem;
+}
+
+.navlink {
+    font-family: frontis-light;
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.navicon {
+    text-decoration: none;
+}
+
+.navicon > svg {
+    height: 40px;
+    width: auto;
+}
+
+/* Sortering */
+.sortBtn {
+    background-color: #E1E0D7;
+    text-decoration: none;
+    color: black;
+    border: 0.5px solid #000;
+    padding: 10px 20px;
+    font-size: 20px;
+    cursor: pointer;
+    font-family: frontis-light;
+}
+
+.hidden {
+    display: none;
+}
+
+.sorting {
+    color: #333;
+    font-family: frontis-light;
+    font-size: 16px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.sorting:hover{
+    transform: scale(1.1);
+}
+
+.sortContainer {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+/* Produkter */
+.productContainer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.5em;
+    margin-top: 1rem;
+}
+
+.categoryTitle {
+    font-family: frontis-light;
+    font-size: 45px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 150%;
+}
+
+.productCard {
+    background-color: #E1E0D7;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    text-decoration: none;
+}
+
+.productCard:hover {
+    background-color: #dedbca;
+}
+
+.imgContainer {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+
+.productImg {
+    display: block;
+    height: auto;
+    width: 100%;
+    background-color: #FFF;
+}
+
+.productName, .productTag, .productPrice {
+    font-family: inter-light;
+    color: black;
+    margin-left: 10px;
+}
+
+.productName {
+    font-size: 16px;
+}
+
+.productTag {
+    font-size: 12px;
+    margin-top: 0;
+}
+
+.productName {
+    margin-bottom: 0;
+}
+
+.productPrice {
+    font-size: 14px;
+}
+
+.productPrice::before {
+    content: "$ ";
+}
+
+/* 
+Tags: 
+soldOut
+sale
+collection
+*/
+
+
+.sale::before, .soldOut::before, .collection::before {
+    font-family: inter-light;
+    position: absolute;
+    color: white;
+    padding: 5px 10px;
+    font-size: 14px;
+}
+
+.sale::before {
+    content: "Sale";
+    background-color: #49492F;
+}
+
+.soldOut::before {
+    content: "Out of stock";
+    background-color: #88623E;
+}
+
+.collection::before {
+    content: "A/W collection";
+    background-color: #6D8C8F;
+}
