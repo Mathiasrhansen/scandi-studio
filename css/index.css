@@ -99,8 +99,14 @@ body {
 
 .heroBtn {
     color: #F7F7F2;
+    background-color: rgba(98, 92, 87, 0.5);
     border: 1.5px solid #F7F7F2;
 }
+
+.heroBtn:hover {
+    background-color: rgba(211, 201, 193, 0.5);
+}
+
 
 .arrow {
     position: absolute;
@@ -117,6 +123,12 @@ body {
     color: var(--logo-colour);
     border-color: var(--logo-colour);
 }
+
+.categories a:hover {
+    background-color: #2E2E2E;
+    color: #FFFFFF;
+}
+
 
 /* Categories */
 .categories {
