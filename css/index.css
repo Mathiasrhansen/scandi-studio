@@ -1,5 +1,5 @@
 body {
-    margin: 0;
+    margin: 0 10vw;
     background-color: var(--background-colour);
 }
 
@@ -117,7 +117,7 @@ body {
 .categories {
     display: flex;
     gap: 1rem;
-    justify-content: space-around;
+    justify-content: space-between;
     padding: 2rem 0;
 }
 
@@ -130,7 +130,6 @@ body {
 
 /* Bestsellers section */
 .sectionHeading {
-    margin-left: 5.5vw;
     font-family: frontis-light;
     font-size: 45px;
     font-weight: 300;
@@ -138,11 +137,10 @@ body {
 }
 
 .cardContainer {
-    margin: 0 5.5vw;
-    margin-bottom: 2rem;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 2rem;
+    gap: 0.5em;
+    margin-top: 1rem;
 }
 
 .bestsellerCard {
@@ -161,10 +159,9 @@ body {
 
 .productImg {
     display: block;
-    max-width: 300px;
     height: auto;
+    width: 100%;
     background-color: #FFF;
-    margin: 0;
 }
 
 .productName, .productTag, .productPrice {
