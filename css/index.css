@@ -102,6 +102,11 @@ body {
     border: 1.5px solid #F7F7F2;
 }
 
+.arrow {
+    position: absolute;
+    bottom: -300px;
+}
+
 .category {
     color: black;
     border: 1.5px solid black;
