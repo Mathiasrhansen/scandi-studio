@@ -1,0 +1,50 @@
+
+/* mobil */
+@media (max-width: 768px) {
+.aboutus{
+    padding-top: 170px;
+    position: relative;
+}
+p{
+    margin-right: 30px;
+    font-size: 10px;
+}
+
+.aboutustext{
+    line-height: 15px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.aboutusimg{
+    max-width: 500px;
+    align-content: center;
+}
+}
+
+/* desktop */
+@media (min-width: 768px) {
+.aboutus{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-top: 170px;
+}
+
+.aboutusimg{
+    width: 700px;
+}
+
+.aboutustext{
+    line-height: 35px;
+}
+p{
+    margin-bottom: 50px;
+    margin-right: 50px;
+}
+}
+
+/* tablet */
+@media (max-width: 1150px){
+    .aboutusimg{
+        max-width: 600px;
+    }
+}
