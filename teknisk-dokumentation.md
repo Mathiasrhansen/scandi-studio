@@ -71,7 +71,11 @@ Brug korte beskrivelser, som i eksemplerne herover
 
 Dette afsnit skal liste de endpoints fra API'et i har benyttet:
 
-- (fx. https://dummyjson.com/products)
+- https://dummyjson.com/products/${id}
+  Til at hente data om et specifikt produkt
+
+- https://dummyjson.com/products/category/${category}
+  Til at hente lister med produkter fra de forskellige kategorier vi bruger
 
 # Dokumentation af Funktion
 
