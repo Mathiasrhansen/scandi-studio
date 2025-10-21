@@ -21,3 +21,34 @@
 body {
     background-color: var(--background-colour);
  }
+
+/********************FOOTER*********************/
+
+
+footer{
+  display: flex;
+  justify-content: space-between;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 20px;
+  margin-top: 80px;
+  padding-top: 30px;
+  border-top: 1px solid black;
+}
+
+footer p{
+    font-family: frontis-light;
+    color: #21441E;
+}
+
+.kontakt-item {
+  display: flex;
+  align-items: center;
+  gap: 10px; 
+  margin-bottom: 20px; 
+}
+
+.kontakt-item img {
+  width: 24px;
+  height: 24px;
+}
