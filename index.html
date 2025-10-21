@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="css/custom.css" />
     <link rel="stylesheet" href="css/general.css" />
     <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css//popUp.css" />
     <title>Scandi Studio</title>
   </head>
   <body>
@@ -183,5 +184,27 @@
         <img src="img/instagram.svg" alt="instagram" />
       </div>
     </footer>
+    <div class="popup-wrapper" id="popup">
+      <div class="popup">
+        <div class="popup-left">
+          <h2>Join our community</h2>
+          <p>
+            Subscribe to our newsletter for exclusive updates, <br />
+            sneak peeks, and design inspiration. <br />
+            Enjoy 10% off your first order as a welcome gift.
+          </p>
+          <form class="popup-form" method="post">
+            <input type="email" name="email" placeholder="E-mail" required />
+            <button type="submit">Sign up</button>
+          </form>
+        </div>
+        <div class="popup-right">
+          <img src="img/pop-up.webp" alt="pop up" />
+          <button class="close-btn" id="closePopup" type="button" aria-label="Close">&times;</button>
+        </div>
+      </div>
+    </div>
+    <script src="js/popUp.js"></script>
+    <footer></footer>
   </body>
 </html>
