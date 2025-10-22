@@ -5,18 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/custom.css" />
     <link rel="stylesheet" href="css/general.css" />
-    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/product.css" />
+    <script src="js/singleview.js" defer></script>
+    <script src="js/singleviewFunctions.js" defer></script>
     <link rel="icon" type="image/svg+xml" href="/img/favicon.svg" />
-    <title>Scandi Studio</title>
+    <title>Document</title>
   </head>
   <body>
     <header>
       <nav class="navbar">
         <div class="links">
           <a href="" class="navlink">Brands</a>
-          <a href="" class="navlink">About us</a>
+          <a href="about.html" class="navlink">About us</a>
         </div>
-        <a href="" class="navlink" id="logo">
+        <a href="index.html" class="navlink" id="logo">
           <svg
             width="191"
             height="131"
@@ -153,77 +155,55 @@
       </nav>
     </header>
     <main>
-      <section class="hero">
-        <img src="img/hero.webp" alt="" class="heroImg" />
-        <div class="heroContainer">
-          <h1 class="heroText">New A/W collection</h1>
-          <a href="" class="heroBtn">Discover new collection</a>
-          <img class="arrow" src="img/arrow.png" alt="" />
+      <section class="productContainer">
+        <div class="imgContainer">
+          <div class="thumbnailContainer">
+            <img src="img/thumbnail.webp" alt="thumbnail1" class="thumbnail" />
+            <img src="img/thumbnail2.webp" alt="thumbnail2" class="thumbnail" />
+          </div>
+          <img src="img/product.webp" alt="productPic" class="productPic" />
         </div>
-      </section>
-      <section class="categories">
-        <a href="products.html?category=furniture" class="category"
-          >Furniture</a
-        >
-        <a href="products.html?category=home-decoration" class="category"
-          >Home Decoration</a
-        >
-        <a href="products.html?category=kitchen-accessories" class="category"
-          >Kitchen Accessories</a
-        >
-      </section>
-      <div class="line">
-        <svg
-          width="1306"
-          height="5"
-          viewBox="0 0 1306 5"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <line
-            x1="0.00153139"
-            y1="0.500002"
-            x2="1306"
-            y2="4.5"
-            stroke="black"
-          />
-        </svg>
-      </div>
-      <section class="bestsellers">
-        <h2 class="sectionHeading">Bestsellers</h2>
-        <div class="cardContainer">
-          <a href="products.html?category=" class="bestsellerCard">
-            <div class="imgContainer">
-              <img src="img/thumbnail.webp" alt="" class="productImg" />
+        <div class="infoContainer">
+          <h1 class="productTitle">Decoration Swing</h1>
+          <p class="productSubtitle">Swing</p>
+
+          <div class="productDescription">
+            <h2>Product description</h2>
+            <p>
+              The Decoration Swing is a charming addition to your home decor.
+              Crafted with intricate details, it adds a touch of elegance and
+              whimsy to any room.
+            </p>
+          </div>
+
+          <div class="colorSection">
+            <h3>Colour</h3>
+            <div class="colorOptions">
+              <div
+                class="colorOption color-black selected"
+                data-color="black"
+              ></div>
+              <div class="colorOption color-white" data-color="striped"></div>
+              <div class="colorOption color-green" data-color="green"></div>
+              <div class="colorOption color-brown" data-color="brown"></div>
+              <div class="colorOption color-gray" data-color="gray"></div>
+              <div class="colorOption color-beige" data-color="beige"></div>
             </div>
-            <p class="productName">dasdsa</p>
-            <p class="productTag">swing</p>
-            <p class="productPrice">cxxvvx</p>
-          </a>
-          <a href="" class="bestsellerCard">
-            <div class="imgContainer">
-              <img src="img/thumbnail.webp" alt="" class="productImg" />
+          </div>
+
+          <div class="priceSection">
+            <span class="originalPrice">$59.99</span>
+            <span class="salePrice">$59.99</span>
+          </div>
+
+          <div class="cartSection">
+            <div class="quantitySelector">
+              <button class="quantityBtn" id="decreaseQty">-</button>
+              <span class="quantityValue" id="quantity">1</span>
+              <button class="quantityBtn" id="increaseQty">+</button>
             </div>
-            <p class="productName">dasdsa</p>
-            <p class="productTag">swing</p>
-            <p class="productPrice">cxxvvx</p>
-          </a>
-          <a href="" class="bestsellerCard">
-            <div class="imgContainer">
-              <img src="img/thumbnail.webp" alt="" class="productImg" />
-            </div>
-            <p class="productName">dasdsa</p>
-            <p class="productTag">swing</p>
-            <p class="productPrice">cxxvvx</p>
-          </a>
-          <a href="" class="bestsellerCard">
-            <div class="imgContainer">
-              <img src="img/thumbnail.webp" alt="" class="productImg" />
-            </div>
-            <p class="productName">dasdsa</p>
-            <p class="productTag">swing</p>
-            <p class="productPrice">cxxvvx</p>
-          </a>
+            <button class="addToCartBtn">Add to cart</button>
+          </div>
         </div>
       </section>
     </main>

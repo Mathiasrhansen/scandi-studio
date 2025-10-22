@@ -1,0 +1,310 @@
+main {
+    margin: 0 10vw;
+    padding: 2rem 0;
+}
+
+/* Navbar */
+.navbar {
+    margin-top: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.icons, .links {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 1.5rem;  
+    margin-top: 1.5rem;   
+}
+
+.icons {
+    gap: 1rem;
+}
+
+.links {
+    gap: 1.5rem;
+}
+
+.navlink {
+    font-family: frontis-light;
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.navicon {
+    text-decoration: none;
+}
+
+.navicon > svg {
+    height: 40px;
+    width: auto;
+}
+
+/* Product Container */
+.productContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    margin-top: 3rem;
+}
+
+/* Image Section */
+.imgContainer {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 1.5rem;
+}
+
+.thumbnailContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.thumbnail {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: border-color 0.3s ease;
+    background-color: white;
+}
+
+.thumbnail:hover {
+    border-color: #21441E;
+}
+
+.productPic {
+    width: 100%;
+    height: auto;
+    max-height: 600px;
+    object-fit: contain;
+    background-color: white;
+}
+
+/* Product Info Section */
+.infoContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.productTitle {
+    font-family: frontis-light;
+    font-size: 3rem;
+    margin: 0;
+    font-weight: 300;
+}
+
+.productSubtitle {
+    font-family: frontis-light;
+    font-size: 2rem;
+    margin: 0;
+    font-weight: 300;
+}
+
+.productDescription {
+    margin-top: 2rem;
+}
+
+.productDescription h2 {
+    font-family: frontis-light;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-weight: 400;
+}
+
+.productDescription p {
+    font-family: frontis-light;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Color Selection */
+.colorSection {
+    margin-top: 1.5rem;
+}
+
+.colorSection h3 {
+    font-family: frontis-light;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    font-weight: 400;
+}
+
+.colorOptions {
+    display: flex;
+    gap: 0.75rem;
+}
+
+.colorOption {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.colorOption:hover {
+    transform: scale(1.1);
+}
+
+.colorOption.selected {
+    border-color: #21441E;
+    box-shadow: 0 0 0 2px white, 0 0 0 4px #21441E;
+}
+
+/* Specific color classes */
+.color-black {
+    background-color: #000;
+}
+
+.color-white {
+    background-color: #fff;
+    border: 1px solid #ddd;
+}
+
+.color-striped {
+    background: linear-gradient(135deg, #fff 50%, #d4a373 50%);
+}
+
+.color-green {
+    background-color: #5a6b5a;
+}
+
+.color-brown {
+    background-color: #6b4423;
+}
+
+.color-gray {
+    background-color: #9a9a9a;
+}
+
+.color-beige {
+    background-color: #f5e6d3;
+}
+
+/* Price Section */
+.priceSection {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.originalPrice {
+    font-family: frontis-light;
+    font-size: 2rem;
+    color: #999;
+    text-decoration: line-through;
+}
+
+.salePrice {
+    font-family: frontis-light;
+    font-size: 2.5rem;
+    color: #21441E;
+    font-weight: 400;
+}
+
+/* Add to Cart Section */
+.cartSection {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.quantitySelector {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border: 1px solid #ddd;
+    height: 55px;
+}
+
+.quantityBtn {
+    font-family: frontis-light;
+    background: none;
+    border: none;
+    padding: 0 1.5rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.quantityBtn:hover {
+    color: #21441E;
+}
+
+.quantityValue {
+    font-family: frontis-light;
+    padding: 0 1.5rem;
+    font-size: 1.2rem;
+    min-width: 3rem;
+    text-align: center;
+}
+
+.addToCartBtn {
+    flex: 1;
+    font-family: frontis-light;
+    background-color: #21441E;
+    color: white;
+    border: none;
+    padding: 1rem 3rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.addToCartBtn:hover {
+    background-color: #2d5a28;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .productContainer {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    main {
+        margin: 0 5vw;
+    }
+}
+
+@media (max-width: 768px) {
+    .imgContainer {
+        grid-template-columns: 1fr;
+    }
+    
+    .thumbnailContainer {
+        flex-direction: row;
+        order: 2;
+    }
+    
+    .thumbnail {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .productTitle {
+        font-size: 2rem;
+    }
+    
+    .productSubtitle {
+        font-size: 1.5rem;
+    }
+    
+    .cartSection {
+        flex-direction: column;
+    }
+    
+    main {
+        margin: 0 3vw;
+    }
+}

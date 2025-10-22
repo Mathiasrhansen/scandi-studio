@@ -35,7 +35,7 @@ fetch(`https://dummyjson.com/products/category/${category}`)
 function showProducts(products) {
     productListContainer.innerHTML = "";
     products.forEach((element) => {
-        productListContainer.innerHTML += `<a href="" class="productCard">
+        productListContainer.innerHTML += `<a href="product.html?id=${element.id}&category=${category}" class="productCard">
           <div class="imgContainer">
             <img src="${element.thumbnail}" alt="${element.title}" class="productImg" />
           </div>
