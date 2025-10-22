@@ -33,15 +33,27 @@ fetch(`https://dummyjson.com/products/category/${category}`)
     });
 
 function showProducts(products) {
-    productListContainer.innerHTML = "";
+
     products.forEach((element) => {
+        // const isOnSale = element.discountPercentage > 0;
+        // const originalPrice = isOnSale ? (element.price / (1 - element.discountPercentage / 100)).toFixed(2) : null;
+        
+        const hasDiscount = element.discountPercentage > 0;
+        const originalPrice = element.price;
+        const salePrice = hasDiscount 
+        ? (element.price * (1 - element.discountPercentage / 100)).toFixed(2)
+        : element.price;
+        const imgClass = hasDiscount ? 'imgContainer sale' : 'imgContainer';
+        
         productListContainer.innerHTML += `<a href="product.html?id=${element.id}&category=${category}" class="productCard">
-          <div class="imgContainer">
+          <div class="${imgClass}">
             <img src="${element.thumbnail}" alt="${element.title}" class="productImg" />
           </div>
           <p class="productName">${element.title}</p>
           <p class="productTag">${element.tags[1]}</p>
-          <p class="productPrice">${element.price}</p>
+          ${hasDiscount ? `<p class="productOriginalPrice">${element.price}</p>` : ''}
+          <p class="productPrice">${salePrice}</p>
+          <button class="productBtn">Read more</button>
         </a>`
     });
 }

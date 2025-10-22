@@ -94,7 +94,6 @@ main {
     background-color: #E1E0D7;
     display: flex;
     flex-direction: column;
-    padding: 10px;
     text-decoration: none;
 }
 
@@ -106,42 +105,67 @@ main {
     display: flex;
     justify-content: center;
     margin: 0;
+    position: relative;
+    background-color: #FFF;
 }
 
 .productImg {
     display: block;
     height: auto;
     width: 100%;
-    background-color: #FFF;
 }
 
-.productName, .productTag, .productPrice {
+.productName, .productTag, .productPrice, .productOriginalPrice {
     font-family: inter-light;
     color: black;
     margin-left: 10px;
 }
 
 .productName {
-    font-size: 16px;
+    font-size: 20px;
+    margin-bottom: 5px;
+    margin-top: 15px;
 }
 
 .productTag {
-    font-size: 12px;
+    font-size: 14px;
     margin-top: 0;
+    margin-bottom: 10px;
 }
 
 .productName {
     margin-bottom: 0;
 }
 
+.productOriginalPrice {
+    font-size: 16px;
+    text-decoration: line-through;
+    color: #888;
+    margin-bottom: 0;
+}
+
 .productPrice {
-    font-size: 14px;
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 5px;
+    margin-bottom: 15px;
 }
 
-.productPrice::before {
-    content: "$ ";
+.productPrice::before, .productOriginalPrice::before {
+    content: "$";
 }
 
+.productBtn {
+    font-family: inter-light;
+    color: white;
+    background-color: #2E2E2D;
+    border: none;
+    width: 50%;
+    padding: 10px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    margin-left: 5px;
+}
 /* 
 Tags: 
 soldOut
@@ -156,19 +180,20 @@ collection
     color: white;
     padding: 5px 10px;
     font-size: 14px;
+    left: 0px;
 }
-
+/* 
 .sale::before {
     content: "Sale";
     background-color: #49492F;
-}
+} */
 
 .soldOut::before {
     content: "Out of stock";
     background-color: #88623E;
 }
 
-.collection::before {
-    content: "A/W collection";
+.sale::before {
+    content: "Sale";
     background-color: #6D8C8F;
 }

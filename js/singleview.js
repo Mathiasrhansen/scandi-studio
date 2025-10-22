@@ -8,7 +8,7 @@ console.log(category);
 
 // Linkstruktur href="product.html?id=xx&category=xx"
 
-fetch(`https://dummyjson.com/products/${id}`).then(res => res.json()).then(product => {console.log(product.brandname)
+fetch(`https://dummyjson.com/products/${id}`).then(res => res.json()).then(product => {console.log("virker")
 
 productContainer.innerHTML = `<div class="imgContainer">
           <div class="thumbnailContainer">
