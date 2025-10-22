@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/general.css" />
     <link rel="stylesheet" href="css/index.css" />
     <link rel="icon" type="image/svg+xml" href="/img/favicon.svg" />
+    <link rel="stylesheet" href="css//popUp.css" />
     <title>Scandi Studio</title>
   </head>
   <body>
@@ -18,8 +19,8 @@
         </div>
         <a href="" class="navlink" id="logo">
           <svg
-            width="191"
-            height="131"
+            width="181"
+            height="121"
             viewBox="0 0 191 131"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -227,6 +228,54 @@
         </div>
       </section>
     </main>
+    <footer>
+      <div class="kontakt-info">
+        <div class="kontakt-item">
+          <img src="img/telefon.svg" alt="telefon" />
+          <p>+45 12 34 56 78</p>
+        </div>
+        <div class="kontakt-item">
+          <img src="img/mail.svg" alt="mail" />
+          <p>web@scandicstudios.com</p>
+        </div>
+      </div>
+      <div class="logo">
+        <img src="img/logo.svg" alt="logo" />
+      </div>
+      <div>
+        <p>Follow us on:</p>
+        <img src="img/tiktok.svg" alt="tiktok" />
+        <img src="img/instagram.svg" alt="instagram" />
+      </div>
+    </footer>
+    <div class="popup-wrapper" id="popup">
+      <div class="popup">
+        <div class="popup-left">
+          <h2>Join our community</h2>
+          <p>
+            Subscribe to our newsletter for exclusive updates, <br />
+            sneak peeks, and design inspiration. <br />
+            Enjoy 10% off your first order as a welcome gift.
+          </p>
+          <form class="popup-form" method="post">
+            <input type="email" name="email" placeholder="E-mail" required />
+            <button type="submit">Sign up</button>
+          </form>
+        </div>
+        <div class="popup-right">
+          <img src="img/pop-up.webp" alt="pop up" />
+          <button
+            class="close-btn"
+            id="closePopup"
+            type="button"
+            aria-label="Close"
+          >
+            &times;
+          </button>
+        </div>
+      </div>
+    </div>
+    <script src="js/popUp.js"></script>
     <footer></footer>
   </body>
 </html>
