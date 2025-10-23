@@ -1,0 +1,193 @@
+/* navbar */
+.navbar {
+    margin-top: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.icons, .links {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 1.5rem;  
+    margin-top: 1.5rem;   
+}
+
+.icons {
+    gap: 1rem;
+}
+
+.links {
+    gap: 1.5rem;
+}
+
+.navlink {
+    font-family: frontis-light;
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.navicon {
+    text-decoration: none;
+}
+
+.navicon > svg {
+    height: 40px;
+    width: auto;
+}
+/* About */
+.aboutus {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  margin: 0 7vw;
+  align-items: center;
+}
+
+.aboutustext {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.aboutustext p {
+  font-family: inter-light;
+  font-size: 16px;
+  line-height: 1.8;
+  color: #2E2E2E;
+  margin: 0;
+  text-align: justify;
+}
+
+.imgContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.aboutusimg {
+    width: 100%;
+  height: auto;
+    object-position: center;
+}
+
+/* Tablet landscape */
+@media (max-width: 1150px) {
+  .aboutus {
+    margin: 0 6vw;
+    gap: 3rem;
+    padding-top: 100px;
+  }
+
+  .aboutustext p {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .aboutusimg {
+    max-height: 600px;
+  }
+}
+
+/* Tablet portrait */
+@media (max-width: 900px) {
+  .aboutus {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    padding-top: 80px;
+    margin: 0 5vw;
+  }
+
+  .imgContainer {
+    order: -1;
+    max-height: 400px;
+  }
+
+  .aboutusimg {
+    max-height: 400px;
+    width: 100%;
+  }
+
+  .aboutustext p {
+    font-size: 15px;
+    text-align: left;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    /* Navbar */
+  .navbar {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    margin-top: 1rem;
+  }
+
+  .icons, .links {
+    margin: 0;
+    margin-top: 0.5rem;
+  }
+
+  .navlink {
+    font-size: 18px;
+  }
+
+  .navicon > svg {
+    height: 32px;
+  }
+  
+    .aboutus {
+    padding-top: 60px;
+    padding-bottom: 50px;
+    margin: 0 4vw;
+    gap: 2.5rem;
+  }
+
+  .aboutustext {
+    gap: 1.25rem;
+  }
+
+  .aboutustext p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .imgContainer {
+    max-height: 350px;
+  }
+
+  .aboutusimg {
+    max-height: 350px;
+  }
+}
+
+/* Small mobile */
+@media (max-width: 480px) {
+  .aboutus {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    margin: 0 5vw;
+    gap: 2rem;
+  }
+
+  .aboutustext {
+    gap: 1rem;
+  }
+
+  .aboutustext p {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  .imgContainer {
+    max-height: 280px;
+  }
+
+  .aboutusimg {
+    max-height: 280px;
+  }
+}
