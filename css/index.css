@@ -165,33 +165,250 @@ main {
     background-color: #E1E0D7;
     display: flex;
     flex-direction: column;
-    padding: 10px;
     text-decoration: none;
+}
+
+.bestsellerCard:hover {
+    background-color: #dedbca;
 }
 
 .imgContainer {
     display: flex;
     justify-content: center;
     margin: 0;
+    position: relative;
+    background-color: #FFF;
 }
 
 .productImg {
     display: block;
     height: auto;
     width: 100%;
-    background-color: #FFF;
 }
 
-.productName, .productTag, .productPrice {
+.productName, .productTag, .productPrice, .productOriginalPrice {
     font-family: inter-light;
     color: black;
     margin-left: 10px;
 }
 
-.productName, .productPrice {
-    font-size: 14px;
+.productName {
+    font-size: 20px;
+    margin-bottom: 5px;
+    margin-top: 15px;
 }
 
 .productTag {
-    font-size: 10px;
+    font-size: 14px;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.productName {
+    margin-bottom: 0;
+}
+
+.productOriginalPrice {
+    font-size: 16px;
+    text-decoration: line-through;
+    color: #888;
+    margin-bottom: 0;
+}
+
+.productPrice {
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+.productPrice::before, .productOriginalPrice::before {
+    content: "$";
+}
+
+.productBtn {
+    font-family: inter-light;
+    color: white;
+    background-color: #2E2E2D;
+    border: none;
+    width: 50%;
+    padding: 10px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    margin-left: 5px;
+}
+
+.bestsellerTag::before {
+    font-family: inter-light;
+    position: absolute;
+    color: white;
+    padding: 5px 10px;
+    font-size: 14px;
+    left: 0;
+    content: "Bestseller";
+    background-color: #49492F;
+}
+
+/* FIKS RESPONSIV */
+
+@media (max-width: 1024px) {
+  main {
+    margin: 0 5vw;
+  }
+
+  .cardContainer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .heroText {
+    font-size: 48px;
+  }
+
+  .heroBtn, .category {
+    width: 20vw;
+    font-size: 18px;
+    padding: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Navbar */
+  .navbar {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    position: relative;
+    margin-top: 1rem;
+  }
+
+  .icons, .links {
+    margin: 0;
+    margin-top: 0.5rem;
+  }
+
+  .navlink {
+    font-size: 18px;
+  }
+
+  .navicon > svg {
+    height: 32px;
+  }
+
+  /* Hero */
+  .hero {
+    margin-bottom: 20px;
+  }
+
+  .heroText {
+    font-size: 36px;
+    max-width: 500px;
+    padding: 0 20px;
+  }
+
+  .heroBtn, .category {
+    width: 40vw;
+    font-size: 16px;
+    padding: 12px;
+  }
+
+  .heroContainer {
+    gap: 1.5rem;
+  }
+
+  .arrow {
+    display: none;
+  }
+
+  /* Categories */
+  .categories {
+    flex-direction: column;
+    gap: 0.75rem;
+    padding: 1.5rem 0;
+  }
+
+  .category {
+    width: 100%;
+  }
+
+  /* Bestsellers */
+  .sectionHeading {
+    font-size: 32px;
+  }
+
+  .cardContainer {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+  }
+
+  .productName {
+    font-size: 12px;
+  }
+
+  .productTag {
+    font-size: 9px;
+  }
+
+  .productPrice {
+    font-size: 12px;
+  }
+
+  main {
+    margin: 0 3vw;
+  }
+}
+
+@media (max-width: 480px) {
+  .heroText {
+    font-size: 24px;
+    max-width: 350px;
+  }
+
+  #logo > svg {
+    height: 50px;
+    width: auto;
+  }
+
+  .hero {
+    /* bottom: 100px; */
+  }
+
+  .heroBtn, .category {
+    width: 60vw;
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .categories{
+
+  }
+
+  .links {
+    gap: 1rem;
+    display: none;
+  }
+
+  .icons {
+    gap: 0.75rem;
+    display: none;
+  }
+
+  .navlink {
+    font-size: 16px;
+  }
+
+  .navicon > svg {
+    height: 28px;
+  }
+
+  .sectionHeading {
+    font-size: 28px;
+  }
+
+  .cardContainer {
+    grid-template-columns: 1fr;
+  }
+
+  main {
+    margin: 0 4vw;
+  }
 }
