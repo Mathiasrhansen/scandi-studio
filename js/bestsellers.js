@@ -1,16 +1,18 @@
 const cardContainer = document.querySelector(".cardContainer");
 
-// Function to get a random ID from the specified ranges
+// Funktion til at skabe et random id fra vores valgte kategorier
 function getRandomProductId() {
-    // Define the two ranges: 11-15 and 43-77
+    // Her oprettes der to objekter som indeholder intervaller med de id'er vi har med at gøre
     const range1 = { min: 11, max: 15 };
     const range2 = { min: 43, max: 77 };
     
-    // Randomly choose one of the two ranges
+    // Her bruges math.random til at vælge én af intervaller der blev oprettet før
+    // Det gør den ved at vælge et tal mellem 0 og 1
     const useRange1 = Math.random() < 0.5;
+    // Hvis tallet er under 0.5 er useRange1 true og så vælger den det første interval (range1)
     const selectedRange = useRange1 ? range1 : range2;
     
-    // Generate random ID within the selected range
+    // Her returnerer den en random værdi fra det valgte interval
     return Math.floor(Math.random() * (selectedRange.max - selectedRange.min + 1)) + selectedRange.min;
 }
 

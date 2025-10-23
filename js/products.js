@@ -2,16 +2,7 @@ const params = new URLSearchParams(window.location.search);
 const category = params.get("category");
 document.querySelector("h1").textContent = category;
 
-const sortBtn = document.querySelector(".sortBtn");
-sortBtn.addEventListener("click", showSorts);
-
-function showSorts() {
-    document.querySelector("#hilo").classList.toggle("hidden");
-    document.querySelector("#lohi").classList.toggle("hidden");
-}
-
-document.querySelector("#hilo").addEventListener("click", showSorted);
-document.querySelector("#lohi").addEventListener("click", showSorted);
+document.querySelector(".sorting").addEventListener("click", showSorted);
 
 function showSorted(event) {
     const direction = event.target.dataset.direction;
@@ -26,6 +17,7 @@ function showSorted(event) {
 const productListContainer = document.querySelector(".productContainer");
 let allData, currentDataSet;
 
+
 fetch(`https://dummyjson.com/products/category/${category}`)
     .then((response) => response.json())
     .then((data) => {
@@ -34,16 +26,17 @@ fetch(`https://dummyjson.com/products/category/${category}`)
     });
 
 function showProducts(products) {
-
+    let htmlString = '';
+    
     products.forEach((element) => {
         const hasDiscount = element.discountPercentage > 0;
         const originalPrice = element.price;
         const salePrice = hasDiscount 
         ? (element.price * (1 - element.discountPercentage / 100)).toFixed(2)
         : element.price;
-                const imgClass = hasDiscount ? 'imgContainer sale' : 'imgContainer';
+        const imgClass = hasDiscount ? 'imgContainer sale' : 'imgContainer';
         
-        productListContainer.innerHTML += `<a href="product.html?id=${element.id}&category=${category}" class="productCard">
+        htmlString += `<a href="product.html?id=${element.id}&category=${category}" class="productCard">
           <div class="${imgClass}">
             <img src="${element.thumbnail}" alt="${element.title}" class="productImg" />
           </div>
@@ -54,4 +47,6 @@ function showProducts(products) {
           <button class="productBtn">Read more</button>
         </a>`
     });
+    
+    productListContainer.innerHTML = htmlString;
 }

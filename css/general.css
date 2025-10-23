@@ -27,7 +27,7 @@ body {
 
 footer{
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   font-weight: 300;
   font-style: normal;
   font-size: 20px;

@@ -64,15 +64,10 @@ main {
     cursor: pointer;
 }
 
-.sorting:hover{
+/* .sorting:hover{
     transform: scale(1.1);
-}
+} */
 
-.sortContainer {
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
-}
 /* Produkter */
 .productContainer {
     display: grid;

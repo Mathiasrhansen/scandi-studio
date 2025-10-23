@@ -63,8 +63,11 @@ Beslutte hvordan i vil navngive filer og mapper for at sikre en ensartet struktu
 Dette afsnit skal forklare hvad I konkret har arbejde med, for at udvikle websitet. Tænk over hvilke interaktioner brugeren kan foretage på sitet? Eller hvordan websitet håndterer og præsenterer data? Eksempler på funktionalitet, der kan beskrives:
 
 - Hentning af produkter fra API.
+  - Vi henter produkterne med ID fra 11-15 og 43-77, da det er de kategorier vi bruger (furniture, kitchen accessories og home decoration)
 - Filtrering af produkter baseret på brugerens valg.
+  - Vi filtrerer med de forskellige kategorier. De da ikke er nogen kønsdeling eller lignende, på møbler, har vi valgt at undlade nogen former for filtrer, dog er det stadigvæk muligt at sortere på prisen
 - Dynamisk visning af produkter i HTML.
+  - Vi viser dynamisk produkterne fra de valgte kategorier, derudover henter og viser vi også dataen dynamisk.
 
 Brug korte beskrivelser, som i eksemplerne herover
 
